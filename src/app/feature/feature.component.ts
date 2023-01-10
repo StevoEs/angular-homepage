@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./feature.component.scss']
 })
 export class FeatureComponent {
-
+  url_einkaufsliste = "https://stefan-studenski.de/";
 }
