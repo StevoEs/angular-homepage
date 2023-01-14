@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,17 +21,18 @@ import { FormComponent } from './form/form.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    CardComponent,
-    FeatureComponent,
-    FooterComponent,
     MainComponent,
-    NotFoundComponent,
+    CardComponent,
     FormComponent,
+    FeatureComponent,
+    NotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -38,7 +41,9 @@ import { FormComponent } from './form/form.component';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy , useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
