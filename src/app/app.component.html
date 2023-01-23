@@ -9,6 +9,7 @@
 <div class="d-flex h-100 text-center text-bg-dark">
     <div class="container">
         <app-navbar></app-navbar>
+        <app-toaster [show]="updateAvailable"></app-toaster>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
     </div>

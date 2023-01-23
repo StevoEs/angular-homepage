@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "http": "http-server -p 8080 -c-1 dist/homepage",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,7 +22,10 @@
     "@angular/service-worker": "^15.0.4",
     "bootstrap": "^5.2.3",
     "chatgpt": "^3.3.12",
+    "dexie": "^3.2.2",
+    "http-server": "^14.1.1",
     "mariadb": "^3.0.2",
+    "ngx-indexed-db": "^12.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.4.1",
     "zone.js": "~0.12.0"
