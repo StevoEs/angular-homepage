@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: [ './toaster.styles.scss' ]
 })
 export class ToasterComponent {
-  @Input() show = false;
+  @Input() show = true;
 
   reload() {
     document.location.reload();
