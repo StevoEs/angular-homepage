@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CheckForUpdateService } from './update.service';
+import { CheckForUpdateService } from './check-for-update.service';
 
-describe('UpdateService', () => {
+describe('CheckForUpdateService', () => {
   let service: CheckForUpdateService;
 
   beforeEach(() => {

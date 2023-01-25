@@ -14,12 +14,14 @@ import { FeatureComponent } from './components/feature/feature.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { CheckForUpdateService } from './services/update.service';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormComponent } from './components/form/form.component';
 import { AjaxComponent } from './components/ajax/ajax.component';
-import { ToasterComponent } from './components/toaster/toaster.components';
+import { ToasterComponent } from './components/toaster/toaster.component';
+
+import { CheckForUpdateService } from './services/check-for-update.service';
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { ToasterComponent } from './components/toaster/toaster.components';
     HomeComponent,
     AjaxComponent,
     ToasterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { ToasterComponent } from './components/toaster/toaster.components';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true})
   ],
   providers: [
-    CheckForUpdateService
+    CheckForUpdateService,
   ],
   bootstrap: [AppComponent],
 })
