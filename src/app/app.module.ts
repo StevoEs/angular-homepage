@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions, } from 'ngx-highlightjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +20,6 @@ import { environment } from '../environments/environment';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormComponent } from './components/form/form.component';
 import { AjaxComponent } from './components/ajax/ajax.component';
-import { ToasterComponent } from './components/toaster/toaster.component';
 
 import { CheckForUpdateService } from './services/check-for-update.service';
 
@@ -36,7 +37,6 @@ import { CheckForUpdateService } from './services/check-for-update.service';
     FooterComponent,
     HomeComponent,
     AjaxComponent,
-    ToasterComponent,
     
   ],
   imports: [
@@ -45,11 +45,24 @@ import { CheckForUpdateService } from './services/check-for-update.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HighlightModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(APP_ROUTES),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true})
   ],
   providers: [
     CheckForUpdateService,
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions> {
+        //lineNumbers: true,
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        //lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css'),
+          xml: () => import('highlight.js/lib/languages/xml')
+    }}}
   ],
   bootstrap: [AppComponent],
 })

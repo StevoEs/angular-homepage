@@ -12,6 +12,7 @@ import { Meta } from '@angular/platform-browser';
 export class AppComponent {
   title = 'Homepage';
   updateAvailable = true;
+  name = 'ngx-highlightjs';
 
   constructor( 
               private meta: Meta,
@@ -26,7 +27,7 @@ export class AppComponent {
 
     this.meta.addTags([
       { name: 'description', content: 'Meine erste Homepage die in dem Framework Angular von Google geschrieben wurde.' },
-      { name: 'keywords', content: 'Studenski, Einkaufsliste, Angular, Lüneburg, Homepage' },
+      { name: 'keywords', content: 'Studenski, Einkaufsliste, Angular, Tutorial, Homepage' },
       { name: 'author', content: 'Stefan Studenski'},
       { name: 'generator', content: 'Angular'}
     ]); 

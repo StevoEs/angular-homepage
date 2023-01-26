@@ -1,1 +1,22 @@
+<h2>Tutorials</h2>
+<p>Hier folgen in kürze kleinere Tutorials.</p>
+<p>Hier vorab schonmal ein kleines Beispiel wie man ein solches "Update" Fenster erstellt.</p>
 
+<pre><code [highlight]="code" [languages]="['css']" 
+[lineNumbers]="true">
+</code></pre>
+
+<pre>{{ response }}</pre>
+
+<div class="toast">
+    <div class="img">
+      <img src="/assets/icons/icon-72x72.png" alt="icon" />
+    </div>
+    <div class="desc">
+      Ein neues Update ist verfügbar!
+      <br/>
+      Klicke auf Update um die Seite zu Aktualisieren.
+      <br/>
+      <button (click)="reload()">Update</button>
+    </div>
+  </div>
