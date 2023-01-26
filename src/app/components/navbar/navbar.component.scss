@@ -55,3 +55,11 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .dropdown-menu>li {
+    padding-left: 20px;
+  }

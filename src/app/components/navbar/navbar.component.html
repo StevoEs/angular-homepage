@@ -15,12 +15,19 @@
             <a routerLink="feature" class="nav-link">Referenzen</a>
           </li>
 
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="form" class="nav-link">Angular</a>
-          </li>
+          <li  class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Tutorial</a>
 
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="tutorial" class="nav-link">Tutorials</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li routerLinkActive="active" class="nav-item">
+                <a routerLink="tutorial" class="nav-link">Bash Scripte</a>
+              </li>
+
+              <li routerLinkActive="active" class="nav-item">
+                <a routerLink="form" class="nav-link">Angular</a>
+              </li>
+
+            </ul>
           </li>
 
           <li routerLinkActive="active" class="nav-item">
