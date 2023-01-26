@@ -2,7 +2,7 @@ import { Routes } from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { FormComponent } from './components/form/form.component';
-import { AjaxComponent } from './components/ajax/ajax.component';
+import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
@@ -20,8 +20,8 @@ export const APP_ROUTES:Routes=[
     component:FormComponent
     },
     {
-    path:'ajax',
-    component:AjaxComponent
+    path:'tutorial',
+    component:TutorialComponent
     },
     {
     path:'feature',

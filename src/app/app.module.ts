@@ -19,9 +19,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormComponent } from './components/form/form.component';
-import { AjaxComponent } from './components/ajax/ajax.component';
 
 import { CheckForUpdateService } from './services/check-for-update.service';
+import { TutorialComponent } from './components/tutorial/tutorial.component';
 
 
 
@@ -36,7 +36,7 @@ import { CheckForUpdateService } from './services/check-for-update.service';
     NotFoundComponent,
     FooterComponent,
     HomeComponent,
-    AjaxComponent,
+    TutorialComponent,
     
   ],
   imports: [
@@ -61,6 +61,7 @@ import { CheckForUpdateService } from './services/check-for-update.service';
         languages: {
           typescript: () => import('highlight.js/lib/languages/typescript'),
           css: () => import('highlight.js/lib/languages/css'),
+          bash: () => import('highlight.js/lib/languages/bash'),
           xml: () => import('highlight.js/lib/languages/xml')
     }}}
   ],

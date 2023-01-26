@@ -1,0 +1,43 @@
+<div class="px-4 py-3 my-3 text-justify">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="display-5 fw-bold text-center"><u>Tutorials</u></h1>
+        <h2 class="text-center">Bash Scripte</h2>
+        <hr>
+        <h3>Image converter</h3>
+        <hr>
+        <p class="lead mb-4">
+            Hier ist ein sehr nützliches Bash Script. Es wandelt image Dateien in viele nützliche größen 
+            für die Webentwicklung um. Es kann sehr leicht angepasst werden. Für die Umwandlung wird das 
+            Programm ImageMagick benötigt. Auf den Meisten Linux Systemen Installiert man es einfach
+            mit folgenden Befehl:
+        </p>
+        <p class="lead mb-4 text-center">
+            <b><i>sudo apt-get install imagemagick</i></b>
+        </p>
+
+
+
+<pre>
+    <button (click)="copyText()" type="button" class="btn btn-secondary btn-sm">Code kopieren</button>
+    <code id="textToCopy" class="text-sm" [highlight]="code" [languages]="['bash']" 
+    [lineNumbers]="true">
+    </code>
+</pre>
+
+   
+<pre>{{ response }}</pre>
+
+
+        <p class="lead mb-4">
+            Der Text wird einfach in eine Text Datei Kopiert. Diese benennt
+            man dann um. Wichtig ist das die Datei mit .sh endet. Also 
+            z.B <b><i>image-converter.sh</i></b>. Diese Datei führt man dann mit der 
+            Konsole aus. Der Befehl dazu lautet <b><i>bash image-converter.sh</i></b>.
+            Dann folgt man den Anweisungen des Scriptes indem man zuerst den Namen
+            der vorhandenen image Datei angibt. Danach wird man nach dem gewünschten
+            image Format gefragt. Gibt man png ein bekommt man automatisch 6 neue
+            image Dateien. Die größe der Bilder wurde dafür im Script vorgegeben und
+            kann nach belieben verändert oder erweitert werden.
+        </p>
+    </div>
+</div>

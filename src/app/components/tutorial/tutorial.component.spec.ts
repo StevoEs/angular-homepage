@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AjaxComponent } from './ajax.component';
+import { TutorialComponent } from './tutorial.component';
 
-describe('AjaxComponent', () => {
-  let component: AjaxComponent;
-  let fixture: ComponentFixture<AjaxComponent>;
+describe('TutorialComponent', () => {
+  let component: TutorialComponent;
+  let fixture: ComponentFixture<TutorialComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AjaxComponent ]
+      declarations: [ TutorialComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AjaxComponent);
+    fixture = TestBed.createComponent(TutorialComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
