@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class FeatureComponent {
   url_einkaufsliste = "https://stefan-studenski.de/";
+  title = 'Referenzen';
 }

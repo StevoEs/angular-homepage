@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  
+  title = 'Angular';
 }
