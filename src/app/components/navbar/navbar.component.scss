@@ -55,3 +55,16 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .dropdown-menu>li {
+    padding-left: 20px;
+    opacity: 1.0;
+  }
+
+  .dropdown-menu-dark {
+    opacity: 0.8;
+  }

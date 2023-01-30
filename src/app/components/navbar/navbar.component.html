@@ -12,19 +12,30 @@
           </li>
 
           <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/blog" class="nav-link">Blog</a>
+          </li>
+
+          <li routerLinkActive="active" class="nav-item">
             <a routerLink="/feature" class="nav-link">Referenzen</a>
           </li>
 
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/form" class="nav-link">Angular</a>
+          <li  class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Tutorial</a>
+
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li routerLinkActive="active" class="nav-item">
+                <a [routerLink]="['/tutorial/bash']" class="nav-link">Bash Scripte</a>
+              </li>
+
+              <li routerLinkActive="active" class="nav-item">
+                <a [routerLink]="['/tutorial/angular']" class="nav-link">Angular</a>
+              </li>
+
+            </ul>
           </li>
 
           <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/ajax" class="nav-link">Ajax</a>
-          </li>
-
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/card" class="nav-link">Information</a>
+            <a routerLink="/info" class="nav-link">Information</a>
           </li>
 
         </ul>

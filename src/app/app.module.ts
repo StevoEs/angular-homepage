@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions, } from 'ngx-highlightjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CardComponent } from './components/card/card.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,10 +18,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormComponent } from './components/form/form.component';
-import { AjaxComponent } from './components/ajax/ajax.component';
-import { ToasterComponent } from './components/toaster/toaster.component';
+
 
 import { CheckForUpdateService } from './services/check-for-update.service';
+import { TutorialComponent } from './components/tutorial/tutorial.component';
+import { InfoComponent } from './components/info/info.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { AngularComponent } from './components/angular/angular.component';
 
 
 
@@ -29,14 +33,15 @@ import { CheckForUpdateService } from './services/check-for-update.service';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CardComponent,
     FormComponent,
     FeatureComponent,
     NotFoundComponent,
     FooterComponent,
     HomeComponent,
-    AjaxComponent,
-    ToasterComponent,
+    TutorialComponent,
+    InfoComponent,
+    BlogComponent,
+    AngularComponent,
     
   ],
   imports: [
@@ -45,12 +50,27 @@ import { CheckForUpdateService } from './services/check-for-update.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HighlightModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(APP_ROUTES),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true})
   ],
   providers: [
     CheckForUpdateService,
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions> {
+        //lineNumbers: true,
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        //lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css'),
+          bash: () => import('highlight.js/lib/languages/bash'),
+          xml: () => import('highlight.js/lib/languages/xml')
+    }}}
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
