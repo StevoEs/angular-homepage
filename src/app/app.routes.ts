@@ -1,6 +1,6 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
-import { CardComponent } from './components/card/card.component';
+import { InfoComponent } from './components/info/info.component';
 import { FormComponent } from './components/form/form.component';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { FeatureComponent } from './components/feature/feature.component';
@@ -9,26 +9,32 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 export const APP_ROUTES:Routes=[
     {
     path:'',
-    component:HomeComponent
+    component:HomeComponent,
+    data: { animation: 'HomePage' }
     },
     {
-    path:'card',
-    component:CardComponent
+    path:'info',
+    component:InfoComponent,
+    data: { animation: 'InfoPage' }
     },
     {
     path:'form',
-    component:FormComponent
+    component:FormComponent,
+    data: { animation: 'FormPage' }
     },
     {
     path:'tutorial',
-    component:TutorialComponent
+    component:TutorialComponent,
+    data: { animation: 'TutorialPage' }
     },
     {
     path:'feature',
-    component:FeatureComponent
+    component:FeatureComponent,
+    data: { animation: 'FeaturePage' }
     },
     {
     path:'**',
-    component:NotFoundComponent
+    component:NotFoundComponent,
+    data: { animation: '404Page' }
     },
 ];

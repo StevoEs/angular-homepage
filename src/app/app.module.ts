@@ -11,7 +11,6 @@ import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions, } from 'ngx-highl
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CardComponent } from './components/card/card.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,8 +19,11 @@ import { environment } from '../environments/environment';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormComponent } from './components/form/form.component';
 
+
 import { CheckForUpdateService } from './services/check-for-update.service';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
+import { InfoComponent } from './components/info/info.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 
@@ -30,13 +32,14 @@ import { TutorialComponent } from './components/tutorial/tutorial.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CardComponent,
     FormComponent,
     FeatureComponent,
     NotFoundComponent,
     FooterComponent,
     HomeComponent,
     TutorialComponent,
+    InfoComponent,
+    BlogComponent,
     
   ],
   imports: [
@@ -66,5 +69,6 @@ import { TutorialComponent } from './components/tutorial/tutorial.component';
     }}}
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

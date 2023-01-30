@@ -15,10 +15,6 @@ export class TutorialComponent {
 
   response!: HighlightAutoResult;
 
-  reload() {
-    document.location.reload();
-  }
-
 code = `#!/bin/bash
 
 echo "Enter the name of the image file with extension: "
