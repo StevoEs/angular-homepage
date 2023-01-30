@@ -12,6 +12,10 @@
           </li>
 
           <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/blog" class="nav-link">Blog</a>
+          </li>
+
+          <li routerLinkActive="active" class="nav-item">
             <a routerLink="/feature" class="nav-link">Referenzen</a>
           </li>
 
@@ -20,11 +24,11 @@
 
             <ul class="dropdown-menu dropdown-menu-dark">
               <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/tutorial" class="nav-link">Bash Scripte</a>
+                <a [routerLink]="['/tutorial/bash']" class="nav-link">Bash Scripte</a>
               </li>
 
               <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/form" class="nav-link">Angular</a>
+                <a [routerLink]="['/tutorial/angular']" class="nav-link">Angular</a>
               </li>
 
             </ul>

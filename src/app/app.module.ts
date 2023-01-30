@@ -24,6 +24,7 @@ import { CheckForUpdateService } from './services/check-for-update.service';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { InfoComponent } from './components/info/info.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { AngularComponent } from './components/angular/angular.component';
 
 
 
@@ -40,6 +41,7 @@ import { BlogComponent } from './components/blog/blog.component';
     TutorialComponent,
     InfoComponent,
     BlogComponent,
+    AngularComponent,
     
   ],
   imports: [
