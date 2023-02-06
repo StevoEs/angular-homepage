@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions, } from 'ngx-highlightjs';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -56,6 +57,7 @@ import { PythonComponent } from './components/tutorials/python/python.component'
     BrowserAnimationsModule,
     RouterModule.forRoot(APP_ROUTES),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true})
+  
   ],
   providers: [
     CheckForUpdateService,

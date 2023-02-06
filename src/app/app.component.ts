@@ -10,6 +10,7 @@ import { ChildrenOutletContexts, NavigationEnd, NavigationStart, Router, RouterO
 
 declare const gtag: Function; 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,6 +25,8 @@ export class AppComponent implements OnInit {
   updateAvailable = true;
   name = 'ngx-highlightjs';
   public isLoading = false;
+
+  
 
   constructor( 
               private meta: Meta,
@@ -90,14 +93,14 @@ export class AppComponent implements OnInit {
     return data;
   }
 
-  // Shows and hides the loading spinner during RouterEvent changes
+  // Zeigt und verbirgt den Lade-Spinner während RouterEvent-Änderungen
   navigationInterceptor(event: any): void {
 
-    //Triggered When the navigation starts
+    //Wird ausgelöst, wenn die Navigation startet
       if (event instanceof NavigationStart) {
         this.loadingDataImg = true;
       }
-    //Triggered When the navigation ends
+    //Ausgelöst Wenn die Navigation endet
       if (event instanceof NavigationEnd) {
         this.loadingDataImg = false;
       }
