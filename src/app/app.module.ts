@@ -17,14 +17,15 @@ import { HomeComponent } from './components/home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { FormComponent } from './components/form/form.component';
 
 
 import { CheckForUpdateService } from './services/check-for-update.service';
-import { TutorialComponent } from './components/tutorial/tutorial.component';
+import { TutorialComponent } from './components/tutorials/tutorial/tutorial.component';
 import { InfoComponent } from './components/info/info.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { AngularComponent } from './components/angular/angular.component';
+import { AngularComponent } from './components/tutorials/angular/angular.component';
+import { DataAnalysisComponent } from './components/data-analysis/data-analysis.component';
+import { PythonComponent } from './components/tutorials/python/python.component';
 
 
 
@@ -33,7 +34,6 @@ import { AngularComponent } from './components/angular/angular.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FormComponent,
     FeatureComponent,
     NotFoundComponent,
     FooterComponent,
@@ -42,6 +42,8 @@ import { AngularComponent } from './components/angular/angular.component';
     InfoComponent,
     BlogComponent,
     AngularComponent,
+    DataAnalysisComponent,
+    PythonComponent,
     
   ],
   imports: [
@@ -67,7 +69,8 @@ import { AngularComponent } from './components/angular/angular.component';
           typescript: () => import('highlight.js/lib/languages/typescript'),
           css: () => import('highlight.js/lib/languages/css'),
           bash: () => import('highlight.js/lib/languages/bash'),
-          xml: () => import('highlight.js/lib/languages/xml')
+          xml: () => import('highlight.js/lib/languages/xml'),
+          python: () => import('highlight.js/lib/languages/python')
     }}}
   ],
   bootstrap: [AppComponent],

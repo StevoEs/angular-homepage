@@ -1,0 +1,33 @@
+<div class="px-4 py-3 my-3 text-justify">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="display-5 fw-bold text-center"><u>Tutorials</u></h1>
+        <h2 class="text-center">Python Scripte</h2>
+        <hr>
+        <h3>Youtube Downloader</h3>
+        <hr>
+        <p class="fs-6 mb-4">
+            Ein nützliches Tool womit man auf fast allen Seiten Videos in mp4 oder nur die Ton Spur in mp3
+            Format Downloaden kann. Es basiert auf dem open source Tool Youtube-Dl. Dieses Python Script
+            vereinfacht euch den umgang damit. Es Prüft beim Start, ob alle nötigen Packete installiert sind.
+            Falls nicht wird euch gefragt ob diese heruntergeladen werden sollen.<br>
+            Dann führt das Script mit Text aufforderungen durch bis zum Download.
+        </p>
+        <p class="lead mb-4 text-center">
+            <b><i>Kopiert den Text und speichert es z.B als python-Dl.py ab.</i></b>
+            <b><i>Dann startet ihr das Script mit der Konsole mit dem Befehl</i></b>
+            <b><i>python python-Dl.py</i></b>
+        </p>
+
+<pre>
+    <button (click)="copyText()" type="button" class="btn btn-secondary btn-sm">Code kopieren</button>
+    <code id="textToCopy" class="text-sm" [highlight]="code" [languages]="['bash']" 
+    [lineNumbers]="true">
+    </code>
+</pre>
+
+   
+<pre>{{ response }}</pre>
+
+
+</div>
+</div>

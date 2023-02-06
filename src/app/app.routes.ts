@@ -1,9 +1,11 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
+import { DataAnalysisComponent } from './components/data-analysis/data-analysis.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { InfoComponent } from './components/info/info.component';
-import { AngularComponent } from './components/angular/angular.component';
-import { TutorialComponent } from './components/tutorial/tutorial.component';
+import { AngularComponent } from './components/tutorials/angular/angular.component';
+import { TutorialComponent } from './components/tutorials/tutorial/tutorial.component';
+import { PythonComponent } from './components/tutorials/python/python.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
@@ -19,6 +21,11 @@ export const APP_ROUTES:Routes=[
         data: { animation: 'BlogPage' }
     },
     {
+        path:'data',
+        component:DataAnalysisComponent,
+        data: { animation: 'DataPage' }
+    },
+    {
         path:'info',
         component:InfoComponent,
         data: { animation: 'InfoPage' }
@@ -32,6 +39,11 @@ export const APP_ROUTES:Routes=[
         path:'tutorial/bash',
         component:TutorialComponent,
         data: { animation: 'TutorialPage' }
+    },
+    {
+        path:'tutorial/python',
+        component:PythonComponent,
+        data: { animation: 'PythonPage' }
     },
     {
         path:'feature',
