@@ -8,6 +8,7 @@ import { Title } from '@angular/platform-browser';
 import { slideInAnimation } from './animations';
 import { ChildrenOutletContexts, NavigationEnd, NavigationStart, Router, RouterOutlet } from '@angular/router';
 
+
 declare const gtag: Function; 
 
 
@@ -25,7 +26,6 @@ export class AppComponent implements OnInit {
   updateAvailable = true;
   name = 'ngx-highlightjs';
   public isLoading = false;
-
   
 
   constructor( 
@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
               private titleService: Title,
               private contexts: ChildrenOutletContexts )  {
               
+
     this.updates.versionUpdates.subscribe((event) => {
     console.log('avaiable!');
     this.updateAvailable = true;

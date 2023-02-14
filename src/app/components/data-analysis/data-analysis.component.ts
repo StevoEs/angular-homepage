@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PythonAnywhereService } from '../../services/python-anywhere.service';
+import { Component} from '@angular/core';
+//import { PythonAnywhereService } from '../../services/python-anywhere.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
@@ -10,24 +10,25 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
       Server CPU auslastung!
     </div>
     <div class="card-body">
-      <div *ngIf="cpuData">
+      <button (click)="getData()">Data</button>
+      <!--<div *ngIf="cpuData">
         {{ cpuData }}
-      </div>
+      </div>-->
     </div>
   </div>
   `
 })
-export class DataAnalysisComponent  implements OnInit {
-  cpuData: any;
 
-  constructor(private pythonAnywhereService: PythonAnywhereService) {}
 
-  ngOnInit() {
-    this.pythonAnywhereService.getCpuData().subscribe(data => {
-      this.cpuData = data;
+
+
+export class DataAnalysisComponent {
+  constructor(private http: HttpClient) {}
+
+  getData() {
+    this.http.get('https://your-django-api.com/api/data').subscribe(data => {
+      console.log(data);
     });
   }
-
-
 }
 
